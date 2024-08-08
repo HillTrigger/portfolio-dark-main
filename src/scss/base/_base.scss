@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Roboto:wght@300;400;500;700&display=swap');
+
+html, body {
+  font-family: $font-main;
+  font-size: 16px;
+  background-color: $back;
+  color: $text-main;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 969px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

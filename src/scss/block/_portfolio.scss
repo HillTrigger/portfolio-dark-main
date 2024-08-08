@@ -1,0 +1,162 @@
+.portfolio {
+  padding: 63px 0;
+  font-weight: 300;
+  min-height: 734px;
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__tabs {
+    &-ul {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    &-li {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-btn {
+      height: 32px;
+      width: 104px;
+      font-size: 14px;
+      display: inline-block;
+      background-color: $dark;
+      margin-right: 6px;
+      transition: all 0.3s ease;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+
+  &__grid {
+    &-load {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        margin-top: 45px;
+        margin-bottom: 15px;
+      }
+    }
+    &-box {
+      width: 224px;
+      height: 224px;
+      background-color: $dark;
+      display: none;
+      position: relative;
+
+      img {
+        object-fit: cover;
+      }
+
+      &:hover .portfolio__grid-box-info {
+        opacity: 1;
+      }
+
+      &-reviews {
+        span {
+          padding-left: 32px;
+        }
+      }
+      &-comments {
+        position: relative;
+        cursor: pointer;
+
+        &:hover::before,
+        &:hover {
+          filter: invert(23%) sepia(90%) saturate(6042%) hue-rotate(182deg)
+            brightness(104%) contrast(107%);
+          color: rgb(64, 115, 235);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          left: 5px;
+          width: 20px;
+          height: 20px;
+          background: url(../../../public/images/portfolio/chat.png) no-repeat;
+          // transition: filter 0.1s ease;
+        }
+      }
+
+      &-likes {
+        position: relative;
+        cursor: pointer;
+        // transition: color 0.3s ease;
+
+        &:hover::before,
+        &:hover {
+          filter: invert(25%) sepia(100%) saturate(7488%) hue-rotate(340deg)
+            brightness(106%) contrast(108%);
+          color: red;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          left: 8px;
+          width: 20px;
+          height: 20px;
+          background: url(../../../public/images/portfolio/heart.png) no-repeat;
+          // transition: filter 0.1s ease;
+        }
+      }
+
+      &-text {
+        margin-bottom: 25px;
+      }
+      &-info {
+        opacity: 0;
+        transition: opacity 0.5s;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+        width: 170px;
+        height: 170px;
+        background-color: $hover-review;
+        text-align: center;
+        padding: 40px 20px;
+
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-weight: 300;
+          font-size: 14px;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8) {
+        display: inline-block;
+      }
+
+      &-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 15px;
+      }
+    }
+  }
+}

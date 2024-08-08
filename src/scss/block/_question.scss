@@ -1,0 +1,14 @@
+.question {
+  background-color: $slogan-back2;
+  &__inner {
+    padding: 150px 0;
+  }
+  &__btn:first-child {
+    margin-right: 9px;
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+}

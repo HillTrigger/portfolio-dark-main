@@ -1,0 +1,58 @@
+.header {
+  &__top-inner {
+    display: grid;
+    grid-template-columns: auto auto minmax(330px, 560px);
+    padding: 45px 0;
+  }
+
+  &__navbar {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    align-items: center;
+    grid-column-start: 3;
+    justify-content: space-between;
+  }
+  &__nav-links {
+    font-weight: 400;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $text-green;
+    }
+  }
+  &__main {
+    background-color: $slogan-back;
+
+    &-wrapper {
+      max-width: 1200px;
+      padding: 0 15px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      .header__arrow:last-child {
+        img {
+          transform: scale(-1, 1);
+        }
+      }
+
+      &2 {
+        height: 589px;
+        max-width: 969px;
+        width: 100%;
+        background: url(../../../public/images/header/white-icons.svg) 95% -170% no-repeat;
+        padding-top: 235px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    font-weight: 300;
+  }
+  &__sub-title {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}

@@ -14,7 +14,7 @@
   }
   &__nav-links {
     font-weight: 400;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
       color: $text-green;
@@ -30,7 +30,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+
       .header__arrow:last-child {
         img {
           transform: scale(-1, 1);
@@ -41,7 +41,7 @@
         height: 589px;
         max-width: 969px;
         width: 100%;
-        background: url(../../../public/images/header/white-icons.svg) 95% -170% no-repeat;
+        background: url(/images/header/white-icons.svg) 95% -170% no-repeat;
         padding-top: 235px;
       }
     }

@@ -1,0 +1,100 @@
+.contact-us {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 101px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 36px;
+    text-align: center;
+    flex: 1 1 100%;
+    margin-top: 66px;
+    margin-bottom: 76px;
+  }
+  &__sub-title {
+    font-weight: 700;
+  }
+
+  &__line {
+    height: 2px;
+    width: 100%;
+    background-color: $dark-light;
+    margin-top: 11px;
+    margin-bottom: 16px;
+  }
+
+  &__input-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__name {
+    flex: 1 1 calc(50% - 8.5px);
+    margin-right: 17px;
+    height: 33px;
+  }
+
+  &__mail {
+    flex: 1 1 calc(50% - 8.5px);
+    height: 33px;
+  }
+  input,
+  textarea {
+    background-color: #222327;
+    padding: 8px;
+  }
+  &__message {
+    flex: 1 1 100%;
+    resize: vertical;
+    margin-top: 16px;
+    height: 140px;
+    margin-bottom: 19px;
+  }
+  &__mail-box {
+    // flex: 1 1 50%;
+    max-width: 671px;
+    width: 100%;
+  }
+  &__info {
+    // flex: 1 1 50%;
+    max-width: 224px;
+    font-size: 16px;
+    font-weight: 500;
+
+    &-first {
+      line-height: 29px;
+      margin-bottom: 20px;
+    }
+
+    &-second {
+      line-height: 25px;
+      margin-bottom: 26px;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__label {
+    font-size: 0;
+  }
+
+  &__btn {
+    width: 104px;
+    height: 32px;
+    background-color: $blue;
+    box-shadow: 0 2px 0 0 darken($blue, 20%);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+
+    &:active {
+      box-shadow: none;
+      transform: translate(0, 2px);
+    }
+  }
+}

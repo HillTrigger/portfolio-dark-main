@@ -27,4 +27,42 @@
     font-weight: 300;
     font-size: 50px;
   }
+
+  &__icons {
+    max-width: 489px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+  }
+
+  &__img-wrap {
+    position: relative;
+
+    &:hover .question__icon:last-child {
+      opacity: 1;
+      background-color: $icons;
+      border-radius: 50%;
+      border: #282a31 6px solid;
+      width: 48px;
+      height: 48px;
+      top: -6px;
+      left: -6px;
+    }
+
+    &:hover .question__icon:first-child {
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    &:last-child {
+      opacity: 0;
+    }
+  }
 }

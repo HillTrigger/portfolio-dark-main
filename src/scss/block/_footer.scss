@@ -1,0 +1,57 @@
+.footer {
+  &__top {
+    padding-top: 72px;
+    padding-bottom: 66px;
+  }
+  &__bottom {
+    background-color: #222327;
+    padding: 55px 0;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 17px;
+  }
+  &__post,
+  &__tweet {
+    font-size: 13px;
+    color: #747474;
+  }
+  &__tweets {
+    .footer__date {
+      margin-bottom: 33px;
+    }
+  }
+  &__line {
+    margin-bottom: 32px;
+  }
+  &__date {
+    font-family: $font-secondary;
+    font-weight: 700;
+  }
+  &__txt {
+    font-weight: 400;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__stream {
+    .footer__line {
+      margin-bottom: 14px;
+      background-color: #dddddd;
+    }
+  }
+
+  &__stream-box {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  &__tweets,
+  &__posts,
+  &__stream {
+    max-width: 265px;
+  }
+}

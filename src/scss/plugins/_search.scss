@@ -1,0 +1,20 @@
+.search {
+  cursor: pointer;
+  grid-column-start: 7;
+  grid-row-start: 1;
+}
+
+.search__inp {
+  grid-column-start: 7;
+  grid-row-start: 1;
+  width: 0;
+  overflow: hidden;
+  transition: width 1s;
+}
+.hide {
+  display: none;
+}
+.search__inp.show {
+  display: inline-block;
+  width: 100px;
+}

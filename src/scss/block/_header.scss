@@ -7,7 +7,8 @@
 
   &__navbar {
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: 1fr;
     align-items: center;
     grid-column-start: 3;
     justify-content: space-between;

@@ -11,4 +11,19 @@
   "block/footer";
 
 // plugins
-@import "plugins/ui";
+@import "plugins/ui", "plugins/search";
+
+::-webkit-input-placeholder {
+  color: #989898;
+}
+:-moz-placeholder {
+  /* Upto Firefox 18, Deprecated in Firefox 19  */
+  color: #989898;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #989898;
+}
+:-ms-input-placeholder {
+  color: #989898;
+}

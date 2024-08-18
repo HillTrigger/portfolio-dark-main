@@ -16,10 +16,19 @@
   &__tweet {
     font-size: 13px;
     color: #747474;
+    margin-bottom: 20px;
   }
   &__tweets {
     .footer__date {
-      margin-bottom: 33px;
+      padding-left: 25px;
+      position: relative;
+
+      &::before {
+        content: url(/images/footer/icons/twitter.png);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
     }
   }
   &__line {
@@ -31,6 +40,7 @@
   }
   &__txt {
     font-weight: 400;
+    margin-top: 10px;
   }
   &__inner {
     display: flex;
@@ -53,5 +63,11 @@
   &__posts,
   &__stream {
     max-width: 265px;
+  }
+  
+  &__info {
+    display: flex;
+    width: 436px;
+    justify-content: space-between;
   }
 }

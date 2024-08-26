@@ -94,3 +94,9 @@ loadMoreBtnPhoto.onclick = () => {
     loadMoreBtnPhoto.style.display = "none";
   }
 };
+
+
+$(document).on("click", ".header__burgerbutton", function (e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+});

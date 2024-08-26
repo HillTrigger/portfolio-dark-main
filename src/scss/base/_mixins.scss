@@ -1,0 +1,19 @@
+@mixin circle($diameter) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+
+
+@mixin for-phone {
+  @media (max-width: 600px) { @content; }
+}
+@mixin for-tablet {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-desktop {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-big-desktop {
+  @media (max-width: 1800px) { @content; }
+}

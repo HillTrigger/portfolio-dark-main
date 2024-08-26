@@ -1,8 +1,9 @@
-//  Mixin
-@import "mixins/mixins";
-
 // Base
 @import "base/reset", "base/vars", "base/base";
+
+//  Mixin
+@import "base/mixins";
+
 
 // Block
 @import "block/header", "block/our-services", "block/logo", "block/services",
@@ -26,4 +27,8 @@
 }
 :-ms-input-placeholder {
   color: #989898;
+}
+
+.none {
+  display: none !important;
 }

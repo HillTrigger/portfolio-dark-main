@@ -1,6 +1,7 @@
 .header {
   &__top-inner {
     display: grid;
+    position: relative;
     grid-template-columns: auto auto minmax(330px, 560px);
     padding: 45px 0;
   }
@@ -12,6 +13,10 @@
     align-items: center;
     grid-column-start: 3;
     justify-content: space-between;
+    
+    @include for-tablet {
+      display: none;
+    }
   }
   &__nav-links {
     font-weight: 400;
@@ -21,6 +26,93 @@
       color: $text-green;
     }
   }
+  &__burgerbutton {
+    display: none;
+    position: absolute;
+    right: 0;
+	margin: 0 auto;
+    top: 50%;
+		transform: translateY(-50%);
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    span {
+        width: 100%;
+        transition: .5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 4px;
+        background: $white;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: rotate(0);
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 44%;
+            width: 60%;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+    &.active {
+        span {
+            &:nth-child(1) {
+                top: 18px;
+                transform: rotate(-45deg);
+            }
+            &:nth-child(2) {
+                width: 0%;
+            }
+            &:nth-child(3) {
+                bottom: 18px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    @include for-tablet {
+      display: block;
+    }
+}
+
+  // &__nav-btn {
+  //   display: none;
+  //   width: 29px;
+  //   height: 3px;
+  //   background-color: $white;
+  //   position: relative;
+    
+  //   &::before,
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: -9px;
+  //     left: 0;
+  //     width: 29px;
+  //     height: 3px;
+  //     background-color: $white;
+  //   }
+
+  //   &::after {
+  //     top: 9px;
+  //   }
+
+  //   &-wrap {
+  //     padding: 20px 10px;
+  //     display: block;
+  //     justify-self: right;
+  //     align-self: center;
+  //     grid-column-start: 3;
+  //     cursor: pointer;
+  //   }
+
+  //   @include for-tablet {
+  //     display: block;
+  //   }
+  // }
   &__main {
     background-color: $slogan-back;
 
@@ -32,6 +124,11 @@
       align-items: center;
       justify-content: space-between;
 
+
+      @include for-desktop {
+        justify-content: center;
+      }
+
       .header__arrow:last-child {
         img {
           transform: scale(-1, 1);
@@ -42,8 +139,11 @@
         height: 589px;
         max-width: 969px;
         width: 100%;
-        background: url(/images/header/white-icons.svg) 95% -170% no-repeat;
         padding-top: 235px;
+        background: url(/images/header/white-icons.svg) 95% -170% no-repeat;
+        @include for-desktop {
+          background: url(/images/header/black-icons.svg) 95% -170% no-repeat;
+        }
       }
     }
   }
@@ -55,5 +155,11 @@
   &__sub-title {
     font-size: 40px;
     font-weight: 500;
+  }
+  &__arrow {
+
+    @include for-desktop {
+      display: none;
+    }
   }
 }

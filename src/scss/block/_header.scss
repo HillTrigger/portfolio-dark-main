@@ -31,10 +31,10 @@
     position: absolute;
     right: 0;
 	margin: 0 auto;
-    top: 50%;
-		transform: translateY(-50%);
-    width: 50px;
-    height: 40px;
+  top: 40.25%;
+		// transform: translateY(-50%);
+    width: 29px;
+    height: 23px;
     cursor: pointer;
     span {
         width: 100%;
@@ -50,7 +50,7 @@
             top: 0;
         }
         &:nth-child(2) {
-            top: 44%;
+            top: 42.5%;
             width: 60%;
         }
         &:nth-child(3) {
@@ -60,14 +60,14 @@
     &.active {
         span {
             &:nth-child(1) {
-                top: 18px;
+                top: 9px;
                 transform: rotate(-45deg);
             }
             &:nth-child(2) {
                 width: 0%;
             }
             &:nth-child(3) {
-                bottom: 18px;
+                bottom: 10px;
                 transform: rotate(45deg);
             }
         }
@@ -78,44 +78,10 @@
     }
 }
 
-  // &__nav-btn {
-  //   display: none;
-  //   width: 29px;
-  //   height: 3px;
-  //   background-color: $white;
-  //   position: relative;
-    
-  //   &::before,
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     top: -9px;
-  //     left: 0;
-  //     width: 29px;
-  //     height: 3px;
-  //     background-color: $white;
-  //   }
-
-  //   &::after {
-  //     top: 9px;
-  //   }
-
-  //   &-wrap {
-  //     padding: 20px 10px;
-  //     display: block;
-  //     justify-self: right;
-  //     align-self: center;
-  //     grid-column-start: 3;
-  //     cursor: pointer;
-  //   }
-
-  //   @include for-tablet {
-  //     display: block;
-  //   }
-  // }
   &__main {
-    background-color: $slogan-back;
-
+    // background-color: $slogan-back;
+    background: rgb(54,47,43);
+    background: linear-gradient(180deg, rgba(54,47,43,1) 0%, rgba(115,97,87,1) 50%);
     &-wrapper {
       max-width: 1200px;
       padding: 0 15px;
@@ -148,6 +114,12 @@
     }
   }
 
+  &__content {
+
+    @include for-tablet {
+      text-align: center;
+    }
+  }
   &__title {
     font-size: 60px;
     font-weight: 300;

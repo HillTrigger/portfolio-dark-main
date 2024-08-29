@@ -13,9 +13,12 @@
     &-ul {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-bottom: 40px;
     }
     &-li {
+      margin-bottom: 10px;
+
       &:last-child {
         margin-right: 0;
       }
@@ -46,14 +49,16 @@
       }
     }
     &-box {
-      width: 224px;
+      // width: 224px;
       height: 224px;
       background-color: $dark;
       display: none;
       position: relative;
-
+      // overflow: hidden;
       img {
         object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
 
       &:hover .portfolio__grid-box-info {
@@ -85,7 +90,13 @@
           width: 20px;
           height: 20px;
           background: url(/images/portfolio/chat.png) no-repeat;
+          background-size: contain;
           // transition: filter 0.1s ease;
+
+          @media (max-width: 735px) {
+            width: 15px;
+            height: 15px;
+          }
         }
       }
 
@@ -110,7 +121,14 @@
           width: 20px;
           height: 20px;
           background: url(/images/portfolio/heart.png) no-repeat;
+          background-size: contain;
           // transition: filter 0.1s ease;
+
+          @media (max-width: 735px) {
+            width: 15px;
+            height: 15px;
+
+          }
         }
       }
 
@@ -121,23 +139,25 @@
         opacity: 0;
         transition: opacity 0.5s;
         position: absolute;
-        top: 27px;
-        left: 27px;
-        width: 170px;
-        height: 170px;
+        top: 12%;
+        left: 12%;
+        width: 75.89%;
+        height: 75.89%;
         background-color: $hover-review;
         text-align: center;
-        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         h3 {
           font-weight: 500;
-          font-size: 18px;
+          font-size: 1.125em;
           margin-bottom: 10px;
         }
 
         span {
           font-weight: 300;
-          font-size: 14px;
+          font-size: 0.875em;
         }
       }
 
@@ -154,9 +174,73 @@
 
       &-wrap {
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(auto-fill, 223px);
         gap: 15px;
+        justify-content: center;
       }
     }
+  }
+}
+
+@media (max-width: 980px) { 
+  .portfolio__grid-box-wrap {
+    grid-template-columns: repeat(auto-fill, 180px);
+  }
+  .portfolio__grid-box {
+    height: 180px;
+  }
+  .portfolio__grid-box-info {
+    font-size: 75.89%;
+  }
+}
+
+@media (max-width: 800px) { 
+  .portfolio__grid-box-wrap {
+    grid-template-columns: repeat(auto-fill, 160px);
+  }
+  .portfolio__grid-box {
+    height: 160px;
+  }
+}
+
+@media (max-width: 735px) { 
+  .portfolio__grid-box-wrap {
+    grid-template-columns: repeat(auto-fill, 130px);
+  }
+  .portfolio__grid-box {
+    height: 130px;
+  }
+  .portfolio__grid-box-info {
+    font-size: 70.89%;
+  }
+  .portfolio__grid-box-reviews span {
+    padding-left: 26px;
+  }
+}
+
+@media (max-width: 600px) { 
+  .portfolio__grid-box-wrap {
+    grid-template-columns: repeat(auto-fill, 180px);
+  }
+  .portfolio__grid-box {
+    height: 180px;
+  }
+  .portfolio__grid-box-info {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 450px) { 
+  .portfolio__grid-box-wrap {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+  .portfolio__grid-box {
+    height: 140px;
+  }
+  .portfolio__grid-box-info {
+    font-size: 80%;
+  }
+  .portfolio__grid-box-text {
+    margin-bottom: 15px;
   }
 }

@@ -2,12 +2,29 @@
   background-color: $slogan-back2;
   &__inner {
     padding: 150px 0;
+    
+
+    @include for-phone {
+      text-align: center;
+    }
+  }
+  &__btns {
+
+    @include for-phone {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__btn {
     margin-top: 30px;
 
     &:first-child {
       margin-right: 9px;
+    }
+
+    @include for-phone {
+      width: 100%;
+      height: 60px;
     }
   }
   &__title {
@@ -31,12 +48,17 @@
   &__icons {
     max-width: 489px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 36px;
+    flex-wrap: wrap;
   }
 
   &__img-wrap {
     position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 0 5px;
+    margin-top: 10px;
 
     &:hover .question__icon:last-child {
       opacity: 1;

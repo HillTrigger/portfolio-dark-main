@@ -9,11 +9,14 @@
   }
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   &__box{
     max-width: 180px;
     display: flex;
+    margin: 0 20px;
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
 
@@ -28,6 +31,7 @@
       font-family: $font-secondary;
       font-size: 13px;
       font-weight: 400;
+      width: 180px;
       color: $services__box-content;
       text-align: center
     }

@@ -1,4 +1,6 @@
 .prices {
+  white-space: nowrap;
+
   &__title {
     font-size: 36px;
     font-weight: 300;
@@ -8,6 +10,7 @@
   }
   &__btn {
     margin-top: 27px;
+    margin-bottom: 15px;
   }
 
   &__sub-cards {
@@ -20,17 +23,23 @@
       // outline: black 2px solid;
       border-radius: 4px;
     }
+
+    @include for-tablet {
+      display: none;
+    }
   }
 
   &__main-cards {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 67px;
 
     .prices__card {
+      display: flex !important;
+      flex-direction: column;
       width: 263px;
-      // outline: black 2px solid;
-      border-radius: 4px;
+      margin-bottom: 67px;
+      // margin: 0 10px;
+
     }
   }
 
@@ -116,6 +125,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 68px;
+    white-space: wrap;
 
     &-wrap {
       display: flex;
@@ -180,3 +190,32 @@
     }
   }
 }
+
+.slick-slide {
+  background-color: #313338;
+  margin: 0 10px;
+  opacity: 0.6;
+
+  & .prices__name {
+    color: #f4f4f4;
+  }
+  & .prices__text span {
+    color: #b6b6b6;
+  }
+
+}
+
+.slick-current {
+  transition: all .3s;
+
+  background-color: $white;
+  opacity: 1;
+
+  & .prices__name {
+    color: $about-us-main;
+  }
+  & .prices__text span {
+    color: $about-us-main;
+  }
+}
+

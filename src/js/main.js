@@ -100,3 +100,25 @@ $(document).on("click", ".header__burgerbutton", function (e) {
   e.preventDefault();
   $(this).toggleClass('active');
 });
+
+
+//prices
+
+$('.prices__main-cards').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  slidesToScroll: 3,
+  arrows: false,
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 9999, // при ширине экрана <= 1024px
+      settings: "unslick"  // Отключение слайдера
+    },
+    {
+      breakpoint: 900, // при ширине экрана <= 1024px
+    },
+  ]
+});

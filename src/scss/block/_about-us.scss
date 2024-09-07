@@ -28,32 +28,59 @@
     display: flex;
     margin-bottom: 102px;
     justify-content: space-between;
+
+    @include for-tablet {
+      flex-direction: column;
+    }
   }
 
   &__people {
     text-align: center;
-    width: 223px;
+    max-width: 223px;
+    &:last-child {
+      @include for-tablet {
+        margin-bottom: 0;
+      }
+    }
+    @include for-desktop {
+
+      font-size: 14px;
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    @include for-tablet {
+      display: flex;
+      max-width: none;
+      margin-bottom: 20px;
+      font-size: 20px;
+
+    }
 
     img {
       object-fit: cover;
+      @include for-desktop {
+        width: 200px;
+      }
     }
 
     &-name {
       font-weight: 500;
-      font-size: 20px;
-      margin-top: 30px;
+      font-size: 1.25em;
+      margin-top: 1.5em;
       margin-bottom: 6px;
     }
     &-post {
-      margin-bottom: 20px;
+      margin-bottom: 1.25em;
+      font-size: 1em;
     }
     &-info {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 400;
-      font-size: 13px;
+      font-size: 0.8125em;
       color: #acacac;
       letter-spacing: 0.3px;
-      line-height: 20px;
+      line-height: 1.25em;
     }
   }
   &__skills {
@@ -72,3 +99,5 @@
     }
   }
 }
+
+

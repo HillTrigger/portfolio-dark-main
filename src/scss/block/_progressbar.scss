@@ -1,0 +1,54 @@
+.progressbar {
+  display: none;
+  width: 90%;
+  float: right;
+  @include for-tablet {
+    display: block;
+  }
+  @include for-phone {
+    width: 100%;
+  }
+  &__box {
+    background: conic-gradient(from 0.75turn at 50% 100%, #1bbc9d, #aaca29);
+    position: relative;
+    height: 28px;
+    width: 100%; /* Set a width */
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(100% - var(--value));
+      height: 100%;
+      background-color: $dark-light; /* Overlays the remaining percentage */
+    }
+
+    &::before {
+      content: attr(data-percentage); /* Displays percentage as text */
+      position: absolute;
+      top: -0%;
+      left: -68px;
+      font-size: 29px;
+      padding-right: 10px; /* Add some padding for better spacing */
+      color: white;
+      font-weight: bold;
+      z-index: 1;
+
+      @include for-phone {
+        left: 1px;
+      }
+    }
+  }
+
+  &__name {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    top: -87%;
+  }
+}

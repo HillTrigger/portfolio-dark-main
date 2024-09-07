@@ -2,6 +2,8 @@
 // background: linear-gradient(145deg, rgba(170,202,41,1) 0%, rgba(27,188,157,1) 100%);
 
 .about-us {
+  display: flex;
+  padding-bottom: 40px;
   &__title {
     font-weight: 300;
     font-size: 36px;
@@ -12,8 +14,21 @@
   &__wrap {
     display: flex;
     align-items: center;
-    margin-bottom: 52px;
+    margin-bottom: 94px;
+    justify-content: space-between;
     width: 100%;
+
+    @include for-phone {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__line {
+    &:first-child {
+      @include for-tablet {
+        display: none;
+      }
+    }
   }
 
   &__sub-title {
@@ -21,7 +36,7 @@
     font-weight: 500;
     font-size: 18px;
     text-align: center;
-    width: 452px;
+    white-space: nowrap;
   }
 
   &__team {
@@ -31,6 +46,9 @@
 
     @include for-tablet {
       flex-direction: column;
+    }
+    @include for-phone {
+      margin-bottom: 40px;
     }
   }
 
@@ -43,24 +61,35 @@
       }
     }
     @include for-desktop {
-
       font-size: 14px;
       max-width: 200px;
-      max-height: 200px;
     }
 
     @include for-tablet {
+      text-align: left;
       display: flex;
       max-width: none;
       margin-bottom: 20px;
       font-size: 20px;
+      background-color: #191a1d;
+    }
 
+    @include for-phone {
+      font-size: 14px;
+    }
+    &-wrap {
+      @include for-tablet {
+        padding-left: 10px;
+      }
     }
 
     img {
       object-fit: cover;
       @include for-desktop {
         width: 200px;
+      }
+      @include for-phone {
+        width: 100px;
       }
     }
 
@@ -87,6 +116,10 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 80px;
+
+    @include for-tablet {
+      display: none;
+    }
   }
   &__skill {
     display: flex;
@@ -99,5 +132,3 @@
     }
   }
 }
-
-

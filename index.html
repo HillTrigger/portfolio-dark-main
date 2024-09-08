@@ -1679,61 +1679,65 @@
           <div class="container">
             <div class="contact-us__inner">
               <h2 class="contact-us__title">Contact Us</h2>
-              <form class="contact-us__mail-box">
-                <fieldset>
-                  <legend class="contact-us__sub-title">MAIL</legend>
+              <div class="contact-us__form">
+                <form class="contact-us__mail-box">
+                  <fieldset>
+                    <legend class="contact-us__sub-title">MAIL</legend>
+                    <div class="contact-us__line line"></div>
+                    <div class="contact-us__input-box">
+                      <label for="contact-name" class="contact-us__label"
+                        >Name</label
+                      >
+                      <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Name"
+                        class="contact-us__name"
+                        required
+                      />
+                      <label for="contact-email" class="contact-us__label"
+                        >Mail</label
+                      >
+                      <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="Mail"
+                        class="contact-us__mail"
+                        required
+                      />
+                      <label for="contact-message" class="contact-us__label"
+                        >Message</label
+                      >
+                      <textarea
+                        id="contact-message"
+                        name="message"
+                        placeholder="Message"
+                        class="contact-us__message"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="contact-us__btn">
+                      Submit mail
+                    </button>
+                  </fieldset>
+                </form>
+                <div class="contact-us__info">
+                  <legend class="contact-us__sub-title">MORE INFO</legend>
                   <div class="contact-us__line line"></div>
-                  <div class="contact-us__input-box">
-                    <label for="contact-name" class="contact-us__label"
-                      >Name</label
-                    >
-                    <input
-                      type="text"
-                      id="contact-name"
-                      name="name"
-                      placeholder="Name"
-                      class="contact-us__name"
-                      required
-                    />
-                    <label for="contact-email" class="contact-us__label"
-                      >Mail</label
-                    >
-                    <input
-                      type="email"
-                      id="contact-email"
-                      name="email"
-                      placeholder="Mail"
-                      class="contact-us__mail"
-                      required
-                    />
-                    <label for="contact-message" class="contact-us__label"
-                      >Message</label
-                    >
-                    <textarea
-                      id="contact-message"
-                      name="message"
-                      placeholder="Message"
-                      class="contact-us__message"
-                      required
-                    ></textarea>
-                  </div>
+                  <p class="contact-us__info-first">
+                    2 (555) 888 555 03 20<br />info@domain.com<br />
+                    <span>skype:</span> username
+                  </p>
+                  <p class="contact-us__info-second">
+                    <span>John Dowl</span><br />
+                    Salt Talke city. UT <br />87550
+                  </p>
                   <button type="submit" class="contact-us__btn">
-                    Submit mail
+                    Purchaise
                   </button>
-                </fieldset>
-              </form>
-              <div class="contact-us__info">
-                <legend class="contact-us__sub-title">MORE INFO</legend>
-                <div class="contact-us__line line"></div>
-                <p class="contact-us__info-first">
-                  2 (555) 888 555 03 20 info@domain.com<br />
-                  <span>skype:</span> username
-                </p>
-                <p class="contact-us__info-second">
-                  <span>John Dowl</span><br />
-                  Salt Talke city. UT <br />87550
-                </p>
-                <button type="submit" class="contact-us__btn">Purchaise</button>
+                </div>
               </div>
             </div>
           </div>

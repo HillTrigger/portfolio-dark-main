@@ -32,14 +32,12 @@
   &__main-cards {
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 67px;
     .prices__card {
       display: flex !important;
       flex-direction: column;
       width: 263px;
-      margin-bottom: 67px;
       // margin: 0 10px;
-
     }
   }
 
@@ -190,32 +188,30 @@
     }
   }
 }
+.prices {
+  .slick-slide {
+    background-color: #313338;
+    margin: 0 10px;
+    opacity: 0.6;
 
-.slick-slide {
-  background-color: #313338;
-  margin: 0 10px;
-  opacity: 0.6;
-
-  & .prices__name {
-    color: #f4f4f4;
+    & .prices__name {
+      color: #f4f4f4;
+    }
+    & .prices__text span {
+      color: #b6b6b6;
+    }
   }
-  & .prices__text span {
-    color: #b6b6b6;
-  }
 
+  & .slick-current {
+    transition: all 0.3s;
+    background-color: $white;
+    opacity: 1;
+
+    & .prices__name {
+      color: $about-us-main;
+    }
+    & .prices__text span {
+      color: $about-us-main;
+    }
+  }
 }
-
-.slick-current {
-  transition: all .3s;
-
-  background-color: $white;
-  opacity: 1;
-
-  & .prices__name {
-    color: $about-us-main;
-  }
-  & .prices__text span {
-    color: $about-us-main;
-  }
-}
-

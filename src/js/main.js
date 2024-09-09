@@ -99,6 +99,10 @@ loadMoreBtnPhoto.onclick = () => {
 $(document).on("click", ".header__burgerbutton", function (e) {
   e.preventDefault();
   $(this).toggleClass('active');
+  $('.header__navbar').toggleClass('header__navbar--open');
+  $('body').css('overflow', function(_, current) {
+    return current === 'hidden' ? 'auto' : 'hidden';
+  });
 });
 
 

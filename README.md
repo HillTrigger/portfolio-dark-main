@@ -1,7 +1,1 @@
-![изображение](https://github.com/user-attachments/assets/c4ac2059-c825-4cd7-847f-2e037ff2cf71)
-![изображение](https://github.com/user-attachments/assets/8e99f726-0bc7-42ee-b02e-f5a55c2a4f88)
-![изображение](https://github.com/user-attachments/assets/392d8861-e1eb-4208-9785-54bc188bffac)
-![изображение](https://github.com/user-attachments/assets/c9014d97-03d3-4632-8bb8-dc59ffd66eef)
-![изображение](https://github.com/user-attachments/assets/1547623f-3c9e-4bd1-930f-ec902e1c7df5)
-![изображение](https://github.com/user-attachments/assets/51f3dbb8-c1cc-465b-994e-1c5334cc2cef)
-![изображение](https://github.com/user-attachments/assets/6827a264-46a2-4fce-9d20-85c61071be49)
+Посмотреть Сайт можно тут: https://hilltrigger.github.io/portfolio-dark-main/

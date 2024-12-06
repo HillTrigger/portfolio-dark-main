@@ -138,11 +138,11 @@ module.exports = {
     ],
   },
 
-  // devServer: {
-  //   port: 4200,
-  //   hot: isDev,
-  //   liveReload: true,
-  //   open: isDev,
-  //   watchFiles: ["src/**/*", "images/**/*"],
-  // },
+  devServer: {
+    port: 4200,
+    hot: isDev,
+    liveReload: true,
+    open: isDev,
+    watchFiles: ["src/**/*"],
+  },
 };

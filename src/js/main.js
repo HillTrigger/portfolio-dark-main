@@ -1,3 +1,17 @@
+import "../scss/main.scss";
+
+import $ from "jquery";
+import "jquery-ui/ui/widgets/tabs.js";
+
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+import "slick-carousel"; // Подключение JS
+import "slick-carousel/slick/slick.css"; // Подключение CSS
+import "slick-carousel/slick/slick-theme.css"; // Подключение темы CSS
+
+//
+Fancybox.bind();
 let search = document.querySelector(".search");
 let input = document.querySelector(".search__inp");
 
@@ -11,7 +25,6 @@ input.addEventListener("blur", (e) => {
   search.classList.toggle("hide");
   input.classList.toggle("show");
 });
-
 
 $(".header__main-wrapper2").slick({
   arrows: false,
@@ -28,9 +41,10 @@ $(".header__arrow--right").on("click", function (e) {
 });
 
 $(".portfolio__tabs").tabs();
+
 // { show: { effect: "blind", duration: 300 } }
-// ====================LOAD-MORE====================== //
-// ====================LOAD-MORE====================== //
+// ====================LOAD-MORE======================
+// ====================LOAD-MORE======================
 
 let loadMoreBtnWeb = document.querySelector(
   ".portfolio__grid-web .portfolio__grid-load"
@@ -70,7 +84,6 @@ loadMoreBtnUi.onclick = () => {
   }
 };
 
-// Для секции "proto"
 let loadMoreBtnProto = document.querySelector(
   ".portfolio__grid-proto .portfolio__grid-load"
 );
@@ -90,7 +103,6 @@ loadMoreBtnProto.onclick = () => {
   }
 };
 
-// Для секции "photo"
 let loadMoreBtnPhoto = document.querySelector(
   ".portfolio__grid-photo .portfolio__grid-load"
 );
@@ -110,20 +122,16 @@ loadMoreBtnPhoto.onclick = () => {
   }
 };
 
-
 $(document).on("click", ".header__burgerbutton-wrap", function (e) {
   e.preventDefault();
-  $('.header__burgerbutton').toggleClass('active');
-  $('.header__navbar').toggleClass('header__navbar--open');
-  $('body').css('overflow', function(_, current) {
-    return current === 'hidden' ? 'auto' : 'hidden';
+  $(".header__burgerbutton").toggleClass("active");
+  $(".header__navbar").toggleClass("header__navbar--open");
+  $("body").css("overflow", function (_, current) {
+    return current === "hidden" ? "auto" : "hidden";
   });
 });
 
-
-//prices
-
-$('.prices__main-cards').slick({
+$(".prices__main-cards").slick({
   infinite: false,
   speed: 300,
   slidesToShow: 1,
@@ -133,11 +141,11 @@ $('.prices__main-cards').slick({
   variableWidth: true,
   responsive: [
     {
-      breakpoint: 9999, // при ширине экрана <= 1024px
-      settings: "unslick"  // Отключение слайдера
+      breakpoint: 9999,
+      settings: "unslick",
     },
     {
-      breakpoint: 900, // при ширине экрана <= 1024px
+      breakpoint: 900,
     },
-  ]
+  ],
 });

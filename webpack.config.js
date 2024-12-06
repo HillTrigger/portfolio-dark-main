@@ -33,18 +33,15 @@ module.exports = {
   devtool: isDev && "source-map",
   entry: {
     main: "./js/main.js",
-    // jqmainjs: "./js/jqmainjs.js",
-    // fancybox: "./js/fancybox/fancybox.js",
   },
   output: {
     filename: filename("js"),
-    publicPath: "./",
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
     extensions: [".js", ".json"],
     alias: {
-      "@images": path.resolve(__dirname, "images"),
+      "@": path.resolve(__dirname, "./"),
     },
   },
   optimization: {
@@ -116,8 +113,8 @@ module.exports = {
         }),
       },
       {
-        test: /\.(png|jpg|jpeg|svg)$/,
-        type: "asset/resource",
+        test: /\.(svg|png|jpe?g|gif)$/i, // Обработка изображений
+        type: "asset/resource", // Копирование файлов без изменения пути
       },
       {
         test: /\.js$/,
@@ -141,11 +138,11 @@ module.exports = {
     ],
   },
 
-  devServer: {
-    port: 4200,
-    hot: isDev,
-    liveReload: true,
-    open: isDev,
-    watchFiles: ["src/**/*"],
-  },
+  // devServer: {
+  //   port: 4200,
+  //   hot: isDev,
+  //   liveReload: true,
+  //   open: isDev,
+  //   watchFiles: ["src/**/*", "images/**/*"],
+  // },
 };

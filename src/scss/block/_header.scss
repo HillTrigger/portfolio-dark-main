@@ -1,6 +1,4 @@
 .header {
-
-
   &__top-inner {
     display: grid;
     // position: relative;
@@ -16,11 +14,10 @@
     grid-column-start: 3;
     justify-content: space-between;
 
-
     @include for-tablet {
       display: none;
     }
-        
+
     &--open {
       display: grid;
       grid-template-columns: none;
@@ -43,7 +40,7 @@
         width: 100vw;
         height: 100%;
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
       }
       .header__input,
@@ -61,50 +58,49 @@
     }
   }
   &__burgerbutton {
-
     position: relative;
     top: 25%;
     margin: 0 auto;
-		// transform: translateY(-50%);
+    // transform: translateY(-50%);
     width: 29px;
     height: 23px;
     span {
-        width: 100%;
-        transition: .5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        height: 4px;
-        background: $white;
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        transform: rotate(0);
-        &:nth-child(1) {
-            top: 0;
-        }
-        &:nth-child(2) {
-            top: 42.5%;
-            width: 60%;
-        }
-        &:nth-child(3) {
-            bottom: 0;
-        }
+      width: 100%;
+      transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 4px;
+      background: $white;
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      transform: rotate(0);
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 42.5%;
+        width: 60%;
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
     &.active {
-        span {
-            &:nth-child(1) {
-                top: 9px;
-                transform: rotate(-45deg);
-            }
-            &:nth-child(2) {
-                width: 0%;
-            }
-            &:nth-child(3) {
-                bottom: 10px;
-                transform: rotate(45deg);
-            }
+      span {
+        &:nth-child(1) {
+          top: 9px;
+          transform: rotate(-45deg);
         }
+        &:nth-child(2) {
+          width: 0%;
+        }
+        &:nth-child(3) {
+          bottom: 10px;
+          transform: rotate(45deg);
+        }
+      }
     }
-    &-wrap{
+    &-wrap {
       display: none;
       position: absolute;
       right: 20px;
@@ -122,8 +118,12 @@
 
   &__main {
     // background-color: $slogan-back;
-    background: rgb(54,47,43);
-    background: linear-gradient(180deg, rgba(54,47,43,1) 0%, rgba(115,97,87,1) 50%);
+    background: rgb(54, 47, 43);
+    background: linear-gradient(
+      180deg,
+      rgba(54, 47, 43, 1) 0%,
+      rgba(115, 97, 87, 1) 50%
+    );
     &-wrapper {
       max-width: 1200px;
       padding: 0 15px;
@@ -131,7 +131,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
 
       @include for-desktop {
         justify-content: center;
@@ -148,16 +147,15 @@
         max-width: 969px;
         width: 100%;
         padding-top: 235px;
-        background: url(/images/header/white-icons.svg) 95% -170% no-repeat;
+        background: url(../../images/header/white-icons.svg) 95% -170% no-repeat;
         @include for-desktop {
-          background: url(/images/header/black-icons.svg) 95% -170% no-repeat;
+          background: url(../../images/header/black-icons.svg) 95% -170% no-repeat;
         }
       }
     }
   }
 
   &__content {
-
     @include for-tablet {
       text-align: center;
     }
@@ -171,11 +169,8 @@
     font-weight: 500;
   }
   &__arrow {
-
     @include for-desktop {
       display: none;
     }
   }
 }
-
-

@@ -190,9 +190,11 @@
 }
 .prices {
   .slick-slide {
-    background-color: #313338;
-    margin: 0 10px;
-    opacity: 0.6;
+    div {
+      background-color: #313338;
+      margin: 0 10px;
+      opacity: 0.6;
+    }
 
     & .prices__name {
       color: #f4f4f4;
@@ -203,9 +205,11 @@
   }
 
   & .slick-current {
-    transition: all 0.3s;
-    background-color: $white;
-    opacity: 1;
+    div {
+      transition: all 0.3s;
+      background-color: $white;
+      opacity: 1;
+    }
 
     & .prices__name {
       color: $about-us-main;

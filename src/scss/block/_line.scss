@@ -1,9 +1,0 @@
-.line {
-  height: 2px;
-  width: 35%;
-  background-color: $dark-light;
-
-  @include for-tablet {
-    width: 80%;
-  }
-}
